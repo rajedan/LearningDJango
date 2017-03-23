@@ -1,0 +1,12 @@
+{% if all_albums %}
+    <ul>
+        {% for album in all_albums %}
+            <img src="{{ album.album_logo }}" alt="{{ album.album_title }}" height="80" width="80">
+            <li>
+                <a href="/music/{{ album.id }}/">{{ album.album_title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No Album to display</h3>
+{% endif %}
